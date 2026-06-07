@@ -1,0 +1,244 @@
+Function in Python
+1. Positive, Negative or Zero
+
+def check_num(n):
+    if n > 0:
+        print("Positive")
+    elif n < 0:
+        print("Negative")
+    else:
+        print("Zero")
+
+check_num(int(input()))
+
+2. Even or Odd
+def even_odd(n):
+    if n % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+
+even_odd(int(input()))
+
+3. Greater of Two Numbers
+def greater(a, b):
+    return a if a > b else b
+
+print(greater(10, 20))
+
+4. Eligible to Vote
+
+def vote(age):
+    if age >= 18:
+        print("Eligible")
+    else:
+        print("Not Eligible")
+
+vote(int(input()))
+
+5. Divisible by 5
+def div5(n):
+    if n % 5 == 0:
+        print("Divisible")
+    else:
+        print("Not Divisible")
+
+div5(int(input()))
+
+6. Leap Year
+def leap(year):
+    if year % 4 == 0:
+        print("Leap Year")
+    else:
+        print("Not Leap Year")
+
+leap(int(input()))
+
+7. Vowel or Consonant
+def vowel(ch):
+    if ch.lower() in "aeiou":
+        print("Vowel")
+    else:
+        print("Consonant")
+
+vowel(input())
+
+8. Largest Among Three Numbers
+def largest(a, b, c):
+    print(max(a, b, c))
+
+largest(10, 25, 15)
+
+9. Sum 1 to 100
+def total():
+    print(sum(range(1, 101)))
+
+total()
+
+10. Multiplication Table
+def table(n):
+    for i in range(1, 11):
+        print(n * i)
+
+table(5)
+
+11. Square of Number
+def square(n):
+    return n * n
+
+print(square(5))
+
+12. Factorial
+def factorial(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    return fact
+
+print(factorial(5))
+
+13. Prime Number
+def prime(n):
+    for i in range(2, n):
+        if n % i == 0:
+            print("Not Prime")
+            return
+    print("Prime")
+
+prime(7)
+
+14. Sum of Digits
+def digit_sum(n):
+    s = 0
+    while n > 0:
+        s += n % 10
+        n //= 10
+    return s
+
+print(digit_sum(123))
+
+15. Sum from 1 to n
+def sum_n(n):
+    return sum(range(1, n + 1))
+
+print(sum_n(10))
+
+List in Python
+
+1. Print List Elements
+nums = [1,2,3,4,5,6,7,8,9,10]
+for i in nums:
+    print(i)
+
+2. Largest element 
+
+nums = [10,20,5,40]
+print(max(nums))
+
+3. Smallest Element
+nums = [10,20,5,40]
+print(min(nums))
+
+4. Sum of List
+
+nums = [1,2,3,4,5]
+print(sum(nums))
+5. Average of List
+
+nums = [1,2,3,4,5]
+print(sum(nums)/len(nums))
+
+6. Count Even Numbers
+nums = [1,2,3,4,5,6]
+count = 0
+
+for i in nums:
+    if i % 2 == 0:
+        count += 1
+
+print(count)
+
+7. List of Odd Numbers
+nums = [1,2,3,4,5,6]
+odd = []
+
+for i in nums:
+    if i % 2 != 0:
+        odd.append(i)
+
+print(odd)
+
+8. Element Exists in List
+nums = [1,2,3,4,5]
+
+if 3 in nums:
+    print("Found")
+else:
+    print("Not Found")
+
+9. Reverse List
+nums = [1,2,3,4,5]
+rev = []
+
+for i in nums:
+    rev = [i] + rev
+
+print(rev)
+
+10. Second Largest Element
+nums = [10,20,30,40]
+nums.sort()
+print(nums[-2])
+
+Python Dictionaries
+
+1. Student Dictionary
+student = {"name":"Aditya","age":18,"city":"Mumbai"}
+print(student)
+
+2. Print Keys
+
+d = {"a":1,"b":2}
+print(d.keys())
+
+3. Print Values
+d = {"a":1,"b":2}
+print(d.values())
+
+4. Add Key-Value Pair
+d = {"a":1}
+d["b"] = 2
+print(d)
+
+5. Update Value
+d = {"a":1}
+d["a"] = 10
+print(d)
+
+6. Check Key Exists
+d = {"a":1,"b":2}
+
+if "a" in d:
+    print("Exists")
+else:
+    print("Not Exists")
+
+7. Remove Key-Value Pair
+d = {"a":1,"b":2}
+del d["a"]
+print(d)
+
+8. Count Key-Value Pairs
+d = {"a":1,"b":2,"c":3}
+print(len(d))
+
+9. Print Keys and Values
+d = {"a":1,"b":2}
+
+for k, v in d.items():
+    print(k, v)
+
+10. Student with Highest Marks
+marks = {"Amit":80, "Rahul":95, "Priya":90}
+highest = max(marks, key=marks.get)
+print(highest, marks[highest])
